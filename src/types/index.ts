@@ -42,3 +42,15 @@ export interface SupportTier {
   emoji: string
   popular?: boolean
 }
+export interface ComponentItem {
+  id: string
+  name: string
+  description: string
+  category: ComponentCategory
+  tags: string[]
+  preview: string
+  code: string
+  animationType?: string
+  isNew?: boolean
+  dependencies?: string[]
+}

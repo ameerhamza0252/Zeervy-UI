@@ -58,7 +58,7 @@ export default function CategoryPage({ params }: PageProps) {
           <div className="text-center py-20">
             <div className="text-5xl mb-4">🚧</div>
             <h3 className="text-2xl font-display text-white mb-2">COMING SOON</h3>
-            <p className="text-gray-500">We're working on components in this category.</p>
+            <p className="text-gray-500">We&apos;re working on components in this category.</p>
           </div>
         )}
       </div>

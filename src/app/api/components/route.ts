@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { components } from '@/data/mycomponents';
+import { MYCOMPONENTS } from '@/data/mycomponents';
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const category = searchParams.get('category');
   const search = searchParams.get('search');
 
-  let result = components;
+  let result = MYCOMPONENTS;
   if (category) result = result.filter(c => c.category === category);
   if (search) {
     const q = search.toLowerCase();

@@ -1,4 +1,5 @@
 import { ZeervyComponent, ComponentCategoryMeta } from '@/types'
+import { defaultConfig } from 'next/dist/server/config-shared'
 
 export const CATEGORY_META: ComponentCategoryMeta[] = [
   {
@@ -67,7 +68,7 @@ export const CATEGORY_META: ComponentCategoryMeta[] = [
   },
 ]
 
-export const MYCOMPONENTS: ZeervyComponent[] = [
+ const MYCOMPONENTS: ZeervyComponent[] = [
   {
     slug: 'hero-1',
     name: 'Animated Orbital Particles',
@@ -83,6 +84,7 @@ export const MYCOMPONENTS: ZeervyComponent[] = [
     createdAt: ''
   },
 ]
+export {MYCOMPONENTS};
 export function getComponentsByCategory(category: string): ZeervyComponent[] {
   return MYCOMPONENTS.filter((c) => c.category === category)
 }

@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { COMPONENTS } from "@/data/mycomponents";
+import { MYCOMPONENTS } from "@/data/mycomponents";
 import { ComponentCard } from "@/components/ui/ComponentCard";
 
 export default function SectionsPage() {
-  const sectionComponents = COMPONENTS.filter(
+  const sectionComponents = MYCOMPONENTS.filter(
     (c) => c.category === "sections" || c.category === "hero"
   );
 

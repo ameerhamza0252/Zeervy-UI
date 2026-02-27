@@ -102,7 +102,7 @@ export default function SupportPage() {
           className="text-center"
         >
           <h2 className="text-4xl font-display text-white mb-4">OTHER WAYS TO HELP</h2>
-          <p className="text-gray-400 mb-10">Can't contribute financially? Here are other ways to support:</p>
+          <p className="text-gray-400 mb-10">Can&apos;t contribute financially&rsquo; Here are other ways to support</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://github.com"
