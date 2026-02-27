@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowLeft, Eye, Code2, Copy, Check } from 'lucide-react'
 import { notFound } from 'next/navigation'
-import { getComponentBySlug, CATEGORY_META } from '@/data/components'
+import { getComponentBySlug, CATEGORY_META } from '@/data/mycomponents'
 import { CodeBlock } from '@/components/showcase/CodeBlock'
 import { copyToClipboard } from '@/lib/utils'
 import toast from 'react-hot-toast'
@@ -36,7 +36,7 @@ export default function ComponentDetailPage({ params }: PageProps) {
         <div className="flex items-center gap-2 mb-8 text-sm text-gray-500 font-mono">
           <Link href="/components" className="hover:text-white transition-colors">Components</Link>
           <span>/</span>
-          <Link href={`/components/${component.category}`} className="hover:text-white transition-colors capitalize">
+          <Link href={ `/components/${component.category}` } className="hover:text-white transition-colors capitalize">
             {meta?.label}
           </Link>
           <span>/</span>

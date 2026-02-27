@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { COMPONENTS } from "@/data/components";
+import { MYCOMPONENTS } from "@/data/mycomponents";
 import { ComponentCard } from "@/components/ui/ComponentCard";
 
 export default function TypographyPage() {
-  const typographyComponents = COMPONENTS.filter((c) => c.category === "typography");
+  const typographyComponents = MYCOMPONENTS.filter((c) => c.category === "typography");
 
   return (
     <div className="min-h-screen pt-16" style={{ background: "#04040a" }}>

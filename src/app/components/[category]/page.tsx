@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { notFound } from 'next/navigation'
-import { CATEGORY_META, getComponentsByCategory } from '@/data/components'
+import { CATEGORY_META, getComponentsByCategory } from '@/data/mycomponents'
 import { ComponentCard } from '@/components/showcase/ComponentCard'
 
 interface PageProps {

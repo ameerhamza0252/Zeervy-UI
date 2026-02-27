@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { COMPONENTS } from "@/data/components";
+import { COMPONENTS } from "@/data/mycomponents";
 import { ComponentCard } from "@/components/ui/ComponentCard";
 
 export default function SectionsPage() {

@@ -67,7 +67,7 @@ export const CATEGORY_META: ComponentCategoryMeta[] = [
   },
 ]
 
-export const COMPONENTS: ZeervyComponent[] = [
+export const MYCOMPONENTS: ZeervyComponent[] = [
   {
     slug: 'hero-1',
     name: 'Animated Orbital Particles',
@@ -83,11 +83,10 @@ export const COMPONENTS: ZeervyComponent[] = [
     createdAt: ''
   },
 ]
-
 export function getComponentsByCategory(category: string): ZeervyComponent[] {
-  return COMPONENTS.filter((c) => c.category === category)
+  return MYCOMPONENTS.filter((c) => c.category === category)
 }
 
 export function getComponentBySlug(slug: string): ZeervyComponent | undefined {
-  return COMPONENTS.find((c) => c.slug === slug)
+  return MYCOMPONENTS.find((c) => c.slug === slug)
 }

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { components } from '@/data/components';
+import { components } from '@/data/mycomponents';
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);

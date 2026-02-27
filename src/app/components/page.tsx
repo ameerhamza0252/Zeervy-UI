@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Search, Filter, X } from 'lucide-react'
-import { COMPONENTS, CATEGORY_META } from '@/data/components'
+import { MYCOMPONENTS, CATEGORY_META } from '@/data/mycomponents'
 import { ComponentCard } from '@/components/showcase/ComponentCard'
 import { ComponentCategory } from '@/types'
 
@@ -10,7 +10,7 @@ export default function ComponentsPage() {
   const [search, setSearch] = useState('')
   const [activeCategory, setActiveCategory] = useState<ComponentCategory | 'all'>('all')
 
-  const filtered = COMPONENTS.filter((c) => {
+  const filtered = MYCOMPONENTS.filter((c) => {
     const matchesCategory = activeCategory === 'all' || c.category === activeCategory
     const matchesSearch =
       !search ||
@@ -68,7 +68,7 @@ export default function ComponentsPage() {
                 : 'bg-[#0D0E16] text-gray-400 border border-[rgba(255,255,255,0.08)] hover:text-white hover:border-[rgba(255,255,255,0.2)]'
             }`}
           >
-            All ({COMPONENTS.length})
+            All ({MYCOMPONENTS.length})
           </button>
           {CATEGORY_META.map((cat) => (
             <button

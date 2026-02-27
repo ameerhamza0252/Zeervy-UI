@@ -1,11 +1,12 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import type { ZeervyComponent } from '@/data/components';
+import type { ZeervyComponent } from '@/types';
 
 interface Props {
   component: ZeervyComponent;
   showCategory?: boolean;
+  index?: number;
 }
 
 export function ComponentCard({ component, showCategory = false }: Props) {
@@ -29,7 +30,7 @@ export function ComponentCard({ component, showCategory = false }: Props) {
         {/* Type label */}
         <div className="absolute top-3 left-3">
           <span className="px-2 py-1 rounded-md bg-black/40 text-[#00ff9d] text-xs font-mono border border-[#00ff9d]/20">
-            {component.animationType}
+            {component.category}
           </span>
         </div>
 

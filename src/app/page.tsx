@@ -2,7 +2,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Zap, Copy, Github, Star } from 'lucide-react'
-import { CATEGORY_META, COMPONENTS } from '@/data/components'
+import { CATEGORY_META, MYCOMPONENTS } from '@/data/mycomponents'
 import { ComponentCard } from '@/components/showcase/ComponentCard'
 
 // Marquee words
@@ -12,8 +12,7 @@ export default function HomePage() {
   const { scrollY } = useScroll()
   const heroY = useTransform(scrollY, [0, 500], [0, -80])
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0])
-
-  const featuredComponents = COMPONENTS.filter((c) => c.isNew).slice(0, 6)
+  const featuredComponents = MYCOMPONENTS.filter((c) => c.isNew).slice(0, 6)
 
   return (
     <div className="bg-[#07080D] min-h-screen">
@@ -36,7 +35,7 @@ export default function HomePage() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(200,255,0,0.25)] bg-[rgba(200,255,0,0.05)] text-[#C8FF00] md:text-sm font-mono text-xs"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#C8FF00] animate-pulse" />
-            {COMPONENTS.length}+ animated components — free forever
+            {MYCOMPONENTS.length}+ animated components — free forever
           </motion.div>
 
           {/* Headline */}
@@ -84,7 +83,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center pointer-events-auto z-10"
           >
             <Link
               href="/components"
@@ -113,7 +112,7 @@ export default function HomePage() {
             className="grid grid-cols-2 sm:grid-cols-4 justify-center items-center gap-2 mt-10"
           >
             {[
-              { value: `${COMPONENTS.length}+`, label: 'Components' },
+              { value: `${MYCOMPONENTS.length}+`, label: 'Components' },
               { value: '8', label: 'Categories' },
               { value: '0', label: 'Dependencies' },
               { value: '∞', label: 'Customizable' },
@@ -185,7 +184,7 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-      
+
       {/* ── CATEGORIES ───────────────────────────────────────── */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <motion.div
