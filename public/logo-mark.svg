@@ -1,0 +1,27 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="markGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#f5c842"/>
+    </linearGradient>
+    <linearGradient id="markGrad2" x1="48" y1="0" x2="0" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f5c842" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <path d="M24 2L44 13.5V34.5L24 46L4 34.5V13.5L24 2Z" fill="url(#markGrad2)" stroke="url(#markGrad)" stroke-width="1.5"/>
+  <line x1="24" y1="2" x2="24" y2="8" stroke="url(#markGrad)" stroke-width="1" opacity="0.5"/>
+  <line x1="44" y1="13.5" x2="38.5" y2="16.5" stroke="url(#markGrad)" stroke-width="1" opacity="0.5"/>
+  <line x1="44" y1="34.5" x2="38.5" y2="31.5" stroke="url(#markGrad)" stroke-width="1" opacity="0.5"/>
+  <line x1="24" y1="46" x2="24" y2="40" stroke="url(#markGrad)" stroke-width="1" opacity="0.5"/>
+  <line x1="4" y1="34.5" x2="9.5" y2="31.5" stroke="url(#markGrad)" stroke-width="1" opacity="0.5"/>
+  <line x1="4" y1="13.5" x2="9.5" y2="16.5" stroke="url(#markGrad)" stroke-width="1" opacity="0.5"/>
+  <circle cx="24" cy="4.5" r="1.5" fill="#00d4ff" opacity="0.8"/>
+  <circle cx="42" cy="14.5" r="1.5" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="42" cy="33.5" r="1.5" fill="#f5c842" opacity="0.6"/>
+  <circle cx="24" cy="43.5" r="1.5" fill="#f5c842" opacity="0.8"/>
+  <circle cx="6" cy="33.5" r="1.5" fill="#f5c842" opacity="0.6"/>
+  <circle cx="6" cy="14.5" r="1.5" fill="#00d4ff" opacity="0.6"/>
+  <path d="M14 16H30L14 28H30" stroke="url(#markGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <line x1="14" y1="32" x2="30" y2="32" stroke="url(#markGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+</svg>
