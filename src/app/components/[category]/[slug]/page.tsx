@@ -49,7 +49,7 @@ export default function ComponentDetailPage({ params }: PageProps) {
             <div className="flex flex-wrap gap-2 mb-3">
               {component.isNew && (
                 <span className="px-2.5 py-0.5 rounded-full text-xs font-mono bg-[rgba(200,255,0,0.1)] text-[#C8FF00] border border-[rgba(200,255,0,0.2)]">
-                  ✦ NEW
+                  NEW
                 </span>
               )}
               <span

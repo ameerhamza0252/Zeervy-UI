@@ -198,7 +198,7 @@ export default function HomePage() {
             <span className="text-xs font-mono text-[#C8FF00] uppercase tracking-widest">Categories</span>
           </div>
           <h2 className="text-5xl md:text-7xl font-display text-white">
-            WHAT'S INSIDE
+            WHAT&apos;S INSIDE
           </h2>
         </motion.div>
 
