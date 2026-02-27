@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { ArrowRight, Zap, Copy, Github, Star } from 'lucide-react'
 import { CATEGORY_META, COMPONENTS } from '@/data/components'
 import { ComponentCard } from '@/components/showcase/ComponentCard'
-import { ZeervyLogo } from '@/components/ui/ZeervyLogo'
 
 // Marquee words
 const marqueeWords = ['HERO SECTIONS', 'CARDS', 'TYPOGRAPHY', 'BUTTONS', 'FORMS', 'NAVIGATION', 'SECTIONS', 'ANIMATIONS', 'LOADERS', 'BADGES']
@@ -19,7 +18,7 @@ export default function HomePage() {
   return (
     <div className="bg-[#07080D] min-h-screen">
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center overflow-hidden">
         {/* Grid */}
         <div
           className="absolute inset-0 opacity-[0.035]"
@@ -28,52 +27,36 @@ export default function HomePage() {
             backgroundSize: '40px 40px',
           }}
         />
-
-        {/* Orb 1 */}
-        <motion.div
-          className="absolute rounded-full opacity-[0.18] blur-[130px] pointer-events-none"
-          style={{ width: 700, height: 700, background: 'radial-gradient(circle, #C8FF00, transparent)', left: '-15%', top: '-10%' }}
-          animate={{ x: [0, 60, 0], y: [0, 40, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        {/* Orb 2 */}
-        <motion.div
-          className="absolute rounded-full opacity-[0.12] blur-[100px] pointer-events-none"
-          style={{ width: 500, height: 500, background: 'radial-gradient(circle, #FF4D6A, transparent)', right: '-10%', bottom: '10%' }}
-          animate={{ x: [0, -50, 0], y: [0, -40, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-        />
-
-        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+        <motion.div style={{ y: heroY, opacity: heroOpacity }} className=" text-center px-4 w-full md:mx-auto flex flex-col items-center gap-6 mt-20">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(200,255,0,0.25)] bg-[rgba(200,255,0,0.05)] text-[#C8FF00] text-sm font-mono mb-10"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[rgba(200,255,0,0.25)] bg-[rgba(200,255,0,0.05)] text-[#C8FF00] md:text-sm font-mono text-xs"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#C8FF00] animate-pulse" />
             {COMPONENTS.length}+ animated components — free forever
           </motion.div>
 
           {/* Headline */}
-          <div className="overflow-hidden mb-6">
+          <div className="overflow-hidden">
             <motion.h1
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               transition={{ delay: 0.3, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[clamp(60px,12vw,130px)] font-display leading-none tracking-wider text-white"
+              className="text-[clamp(10px,10vw,80px)] md:text-[clamp(60px,12vw,130px)] font-display leading-none tracking-wider text-white]"
               style={{ textShadow: '0 0 80px rgba(200,255,0,0.12)' }}
             >
               COMPONENTS
             </motion.h1>
           </div>
-          <div className="overflow-hidden mb-6">
+          <div className="overflow-hidden">
             <motion.h1
               initial={{ y: '100%' }}
               animate={{ y: 0 }}
               transition={{ delay: 0.45, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[clamp(60px,12vw,130px)] font-display leading-none tracking-wider"
+              className="text-[clamp(10px,10vw,80px)] md:text-[clamp(60px,12vw,130px)] font-display leading-none tracking-wider text-white]"
               style={{
                 background: 'linear-gradient(135deg, #C8FF00 0%, #7FFF00 50%, #C8FF00 100%)',
                 backgroundSize: '200% auto',
@@ -91,7 +74,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed"
+            className="md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed text-sm"
           >
             Copy-paste animated React components — hero sections, cards, typography effects,
             and full page sections. Built with TypeScript, Tailwind & Framer Motion.
@@ -105,14 +88,17 @@ export default function HomePage() {
           >
             <Link
               href="/components"
-              className="group flex items-center gap-2 px-8 py-4 bg-[#C8FF00] text-[#07080D] font-semibold rounded-xl hover:shadow-[0_0_40px_rgba(200,255,0,0.5)] transition-all duration-300 hover:scale-105"
+              className="group flex items-center justify-center gap-2 px-8 py-4 bg-[#C8FF00] text-[#07080D] font-semibold rounded-xl 
+              hover:shadow-[0_0_40px_rgba(200,255,0,0.5)] transition-all duration-300 hover:scale-105
+              text-sm min-w-[250px] md:text-base font-mono
+              "
             >
               Browse All Components
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href="https://github.com"
-              className="flex items-center gap-2 px-8 py-4 border border-[rgba(255,255,255,0.15)] text-white rounded-xl hover:border-[rgba(200,255,0,0.4)] transition-all duration-300"
+              className="flex items-center justify-center gap-2 px-8 py-4 border border-[rgba(255,255,255,0.15)] text-white rounded-xl hover:border-[rgba(200,255,0,0.4)] transition-all duration-300 min-w-[250px] text-sm md:text-base font-mono"
             >
               <Github className="w-4 h-4" />
               Star on GitHub
@@ -124,36 +110,38 @@ export default function HomePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.1 }}
-            className="flex flex-wrap justify-center gap-12 mt-20"
+            className="grid grid-cols-2 sm:grid-cols-4 justify-center items-center gap-2 mt-10"
           >
             {[
               { value: `${COMPONENTS.length}+`, label: 'Components' },
               { value: '8', label: 'Categories' },
-              { value: '0', label: 'Dependencies required' },
+              { value: '0', label: 'Dependencies' },
               { value: '∞', label: 'Customizable' },
             ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-4xl font-display text-[#C8FF00]">{stat.value}</div>
-                <div className="text-sm text-gray-500 mt-1 font-mono">{stat.label}</div>
+              <div key={stat.label} className="text-center w-32">
+                <div className="text-xl md:text-4xl font-display text-[#C8FF00]">{stat.value}</div>
+                <div className="text-xs md:text-sm text-gray-500 mt-1 font-mono">{stat.label}</div>
               </div>
             ))}
           </motion.div>
-        </motion.div>
 
         {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="flex flex-col items-center gap-2"
         >
-          <div className="text-xs text-gray-600 font-mono tracking-widest uppercase">Scroll</div>
+          <div className="text-xs text-gray-600 font-mono uppercase">Scroll</div>
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
             className="w-0.5 h-8 bg-gradient-to-b from-[#C8FF00] to-transparent"
           />
         </motion.div>
+        </motion.div>
+
+
       </section>
 
       {/* ── MARQUEE ──────────────────────────────────────────── */}
@@ -168,6 +156,36 @@ export default function HomePage() {
         </div>
       </div>
 
+            {/* ── FEATURED COMPONENTS ──────────────────────────────── */}
+      <section className="py-24 px-4 max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex items-end justify-between mb-14"
+        >
+          <div>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-px bg-[#C8FF00]" />
+              <span className="text-xs font-mono text-[#C8FF00] uppercase tracking-widest">Latest Drops</span>
+            </div>
+            <h2 className="text-5xl md:text-7xl font-display text-white">FRESH PICKS</h2>
+          </div>
+          <Link
+            href="/components"
+            className="hidden md:flex items-center gap-2 text-sm text-gray-400 hover:text-[#C8FF00] transition-colors font-mono"
+          >
+            View all <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredComponents.map((c, i) => (
+            <ComponentCard key={c.id} component={c} index={i} />
+          ))}
+        </div>
+      </section>
+      
       {/* ── CATEGORIES ───────────────────────────────────────── */}
       <section className="py-24 px-4 max-w-7xl mx-auto">
         <motion.div
@@ -222,36 +240,6 @@ export default function HomePage() {
                 </div>
               </Link>
             </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── FEATURED COMPONENTS ──────────────────────────────── */}
-      <section className="py-24 px-4 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex items-end justify-between mb-14"
-        >
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-8 h-px bg-[#C8FF00]" />
-              <span className="text-xs font-mono text-[#C8FF00] uppercase tracking-widest">Latest Drops</span>
-            </div>
-            <h2 className="text-5xl md:text-7xl font-display text-white">FRESH PICKS</h2>
-          </div>
-          <Link
-            href="/components"
-            className="hidden md:flex items-center gap-2 text-sm text-gray-400 hover:text-[#C8FF00] transition-colors font-mono"
-          >
-            View all <ArrowRight className="w-4 h-4" />
-          </Link>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredComponents.map((c, i) => (
-            <ComponentCard key={c.id} component={c} index={i} />
           ))}
         </div>
       </section>

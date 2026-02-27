@@ -121,38 +121,13 @@ export default function ComponentDetailPage({ params }: PageProps) {
         </div>
 
         {/* Panel */}
-        <div className="mt-0 rounded-b-xl rounded-tr-xl overflow-hidden border border-[rgba(255,255,255,0.08)]">
+        <div className="mt-0 rounded-b-xl rounded-tr-xl overflow-hidden border border-[rgba(255,255,255,0.08)] w-full h-[80vh]">
           {activeTab === 'preview' ? (
-            <div className="min-h-[400px] bg-[#0D0E16] flex items-center justify-center relative p-10">
-              {/* Grid pattern */}
-              <div
-                className="absolute inset-0 opacity-[0.04]"
-                style={{
-                  backgroundImage: 'linear-gradient(rgba(200,255,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(200,255,0,1) 1px, transparent 1px)',
-                  backgroundSize: '30px 30px',
-                }}
-              />
-              <div className="relative z-10 text-center">
-                <div className="text-6xl mb-4">
-                  {component.category === 'hero' ? '⚡' :
-                   component.category === 'cards' ? '▦' :
-                   component.category === 'typography' ? 'Aa' :
-                   component.category === 'buttons' ? '◉' :
-                   component.category === 'sections' ? '⊞' : '✦'}
-                </div>
-                <p className="text-gray-600 text-sm font-mono">Live preview renders in your browser after copying</p>
-                <button
-                  onClick={handleCopy}
-                  className="mt-6 px-6 py-3 bg-[#C8FF00] text-[#07080D] font-semibold rounded-lg hover:shadow-[0_0_30px_rgba(200,255,0,0.4)] transition-all"
-                >
-                  Copy & Use Component
-                </button>
-              </div>
-            </div>
+            <iframe src={component.preview} className="w-full h-full border-0" />
           ) : (
             <CodeBlock
               code={component.code}
-              filename={`${component.slug}.tsx`}
+              language={`${component.slug}.tsx`}
             />
           )}
         </div>

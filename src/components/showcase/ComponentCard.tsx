@@ -22,12 +22,9 @@ export function ComponentCard({ component, showCategory = false }: Props) {
     <div className="group relative flex flex-col rounded-2xl bg-zinc-900/60 border border-white/5 hover:border-[#00ff9d]/20 transition-all duration-200 overflow-hidden hover:-translate-y-1">
       {/* Preview area */}
       <div className="relative h-48 bg-zinc-950/80 border-b border-white/5 flex items-center justify-center overflow-hidden grid-bg">
-        {/* Abstract animated preview placeholder */}
-        <div className="flex flex-col items-center gap-2 opacity-40">
-          <div className="w-12 h-1.5 rounded-full bg-[#00ff9d] animate-pulse" />
-          <div className="w-8 h-1.5 rounded-full bg-white/20" style={{ animationDelay: '150ms' }} />
-          <div className="w-10 h-1.5 rounded-full bg-white/20" style={{ animationDelay: '300ms' }} />
-        </div>
+      
+       <iframe src={component.preview}></iframe>
+       
 
         {/* Type label */}
         <div className="absolute top-3 left-3">

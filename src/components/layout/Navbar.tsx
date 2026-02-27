@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ZeervyLogo } from '@/components/ui/ZeervyLogo'
 import { Menu, X, Search } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const navLinks = [
   { href: '/components', label: 'Components' },
@@ -76,8 +77,7 @@ export function Navbar() {
           </button>
         </div>
       </header>
-
-      {/* Mobile menu */}
+            {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -105,6 +105,6 @@ export function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+      </>
   )
 }
