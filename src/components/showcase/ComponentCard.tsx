@@ -24,7 +24,7 @@ export function ComponentCard({ component, showCategory = false }: Props) {
       {/* Preview area */}
       <div className="relative h-48 bg-zinc-950/80 border-b border-white/5 flex items-center justify-center overflow-hidden grid-bg">
       
-       <iframe src={component.preview}></iframe>
+       <iframe src={component.preview}  sandbox="allow-scripts allow-same-origin" className="w-[720px] h-[360px]"></iframe>
        
 
         {/* Type label */}
