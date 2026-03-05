@@ -3,25 +3,6 @@
 > Animated component library for modern developers — copy, paste, customize.
 
 **Zeervy UI** is a curated collection of animated, production-ready React/Next.js components built with TypeScript, Tailwind CSS, and Framer Motion.
-
----
-
-## 🚀 Getting Started
-
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/zeervy-ui.git
-
-# Install dependencies
-cd zeervy-ui
-npm install
-
-# Run development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
 ---
 
 ## 📦 Tech Stack
@@ -61,27 +42,6 @@ src/
 
 ---
 
-## 🔌 CMS Integration
-
-The `src/data/components.ts` file is the **component registry**. To connect to a CMS (Sanity, Contentful, etc.), replace the static array with API calls:
-
-```typescript
-// Example: Sanity CMS integration
-// src/lib/sanity.ts
-import { createClient } from '@sanity/client'
-
-const client = createClient({
-  projectId: 'your-project-id',
-  dataset: 'production',
-  apiVersion: '2024-01-01',
-  useCdn: true,
-})
-
-export async function getComponents(): Promise<ZeervyComponent[]> {
-  return client.fetch(`*[_type == "component"] | order(createdAt desc)`)
-}
-```
-
 Then in your page:
 ```typescript
 // app/components/page.tsx
@@ -114,7 +74,3 @@ The support page (`/support`) is ready for Stripe integration:
 | `font-mono` | DM Mono | Code, labels |
 
 ---
-
-## 📄 License
-
-MIT License — free forever. See `LICENSE`.
