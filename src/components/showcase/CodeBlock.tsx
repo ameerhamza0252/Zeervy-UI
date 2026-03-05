@@ -16,7 +16,7 @@ export function CodeBlock({ code, language = 'tsx' }: Props) {
   };
 
   return (
-    <div className="relative rounded-2xl overflow-hidden border border-white/10">
+    <div className="relative rounded-2xl overflow-scroll border border-white/10">
       {/* Header bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-zinc-900 border-b border-white/5">
         <div className="flex items-center gap-2">
@@ -38,7 +38,7 @@ export function CodeBlock({ code, language = 'tsx' }: Props) {
       </div>
 
       {/* Code content */}
-      <div className="bg-[#0a0e17] overflow-x-auto">
+      <div className="bg-[#0a0e17] overflow-scroll">
         <pre className="p-5 text-sm font-mono leading-7 text-zinc-300 whitespace-pre">
           <code className="text-zinc-300">
             {code.split('\n').map((line, i) => (

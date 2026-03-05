@@ -98,7 +98,6 @@ export default function ComponentDetailPage({ params }: PageProps) {
                 {dep}
               </code>
             ))}
-            <span className="text-xs text-gray-600 ml-2">npm install {component.dependencies.join(' ')}</span>
           </div>
         )}
 
@@ -121,7 +120,7 @@ export default function ComponentDetailPage({ params }: PageProps) {
         </div>
 
         {/* Panel */}
-        <div className="mt-0 rounded-b-xl rounded-tr-xl overflow-hidden border border-[rgba(255,255,255,0.08)] w-full h-[80vh]">
+        <div className="mt-0 rounded-b-xl rounded-tr-xl overflow-hidden border border-[rgba(255,255,255,0.08)] w-full h-[80vh] overflow-scroll content-editable">
           {activeTab === 'preview' ? (
             <iframe src={component.preview} className="w-full h-full border-0" />
           ) : (

@@ -54,8 +54,9 @@ export const CATEGORY_META: ComponentCategoryMeta[] = [
 
  const MYCOMPONENTS: ZeervyComponent[] = [
   {
-    slug: 'hero-1',
+    slug: 'HeroSection-1',
     name: 'Animated Orbital Particles',
+    dependencies: ['Canvas API'],
     description: 'Orbital partical animations, revoles around cursor movement, creating an interactive and dynamic background effect.',
     category: 'hero',
     tags: ['Cursor Motion', 'Orbital Particles'],
