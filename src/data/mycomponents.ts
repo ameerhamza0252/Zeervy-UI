@@ -5,8 +5,8 @@ export const CATEGORY_META: ComponentCategoryMeta[] = [
   {
     id: 'hero',
     label: 'Hero Sections',
-    description: 'Stunning landing page heroes with animations',
-    icon: '⚡',
+    description: 'Stunning Hero sections with animations',
+    icon: '★',
     count: 8,
     color: '#C8FF00',
   },
@@ -21,7 +21,7 @@ export const CATEGORY_META: ComponentCategoryMeta[] = [
   {
     id: 'typography',
     label: 'Typography',
-    description: 'Animated headings, text reveals, and type effects',
+    description: 'Headings, text reveals, and type effects',
     icon: 'Aa',
     count: 9,
     color: '#7C3AED',
@@ -33,22 +33,6 @@ export const CATEGORY_META: ComponentCategoryMeta[] = [
     icon: '◉',
     count: 11,
     color: '#F59E0B',
-  },
-  {
-    id: 'navigation',
-    label: 'Navigation',
-    description: 'Navbars, sidebars, and menu components',
-    icon: '≡',
-    count: 6,
-    color: '#06B6D4',
-  },
-  {
-    id: 'sections',
-    label: 'Full Sections',
-    description: 'Complete page sections ready to drop in',
-    icon: '⊞',
-    count: 7,
-    color: '#10B981',
   },
   {
     id: 'forms',

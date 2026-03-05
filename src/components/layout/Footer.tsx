@@ -12,12 +12,10 @@ const footerLinks = {
   ],
   Resources: [
     { label: 'Documentation', href: '/docs' },
-    { label: 'Changelog', href: '/changelog' },
-    { label: 'GitHub', href: 'https://github.com' },
+    { label: 'GitHub', href: 'https://github.com/ameerhamza0252/Zeervy-UI' },
     { label: 'Support Us', href: '/support' },
   ],
   Legal: [
-    { label: 'License (MIT)', href: '/license' },
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Terms of Use', href: '/terms' },
   ],
@@ -68,7 +66,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-[rgba(255,255,255,0.06)] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Zeervy UI. MIT License.
+            © {new Date().getFullYear()} Zeervy UI. License.
           </p>
           <p className="text-gray-500 text-sm flex items-center gap-1">
             Made with <Heart className="w-3 h-3 text-[#FF4D6A] fill-[#FF4D6A] mx-1" /> for the developer community

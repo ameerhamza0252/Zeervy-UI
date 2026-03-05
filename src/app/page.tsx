@@ -96,7 +96,7 @@ export default function HomePage() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="https://github.com"
+              href="https://github.com/ameerhamza0252/Zeervy-UI"
               className="flex items-center justify-center gap-2 px-8 py-4 border border-[rgba(255,255,255,0.15)] text-white rounded-xl hover:border-[rgba(200,255,0,0.4)] transition-all duration-300 min-w-[250px] text-sm md:text-base font-mono"
             >
               <Github className="w-4 h-4" />
@@ -202,7 +202,7 @@ export default function HomePage() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           {CATEGORY_META.map((cat, i) => (
             <motion.div
               key={cat.id}
@@ -213,14 +213,14 @@ export default function HomePage() {
             >
               <Link href={`/components/${cat.id}`}>
                 <div
-                  className="group relative p-6 rounded-xl bg-[#0D0E16] border border-[rgba(255,255,255,0.06)] hover:border-opacity-50 transition-all duration-300 overflow-hidden cursor-pointer"
+                  className="group relative min-h-[280px] max-h-[280px] flex flex-col justify-center rounded-xl bg-[#0D0E16] border border-[rgba(255,255,255,0.06)] hover:border-opacity-50 transition-all duration-300 overflow-hidden cursor-pointer"
                   style={{ '--cat-color': cat.color } as React.CSSProperties}
                 >
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     style={{ background: `radial-gradient(circle at 0% 0%, ${cat.color}10, transparent 70%)` }}
                   />
-                  <div className="relative z-10">
+                  <div className="relative z-10 p-2i h-full flex flex-col justify-center gap-2 items-center">
                     <div
                       className="text-2xl mb-4 w-12 h-12 rounded-lg flex items-center justify-center text-xl"
                       style={{ background: `${cat.color}15`, border: `1px solid ${cat.color}30` }}
@@ -321,7 +321,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/components"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-[#C8FF00] text-[#07080D] font-bold text-lg rounded-xl hover:shadow-[0_0_50px_rgba(200,255,0,0.6)] transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-[#C8FF00] text-[#07080D] font-bold text-xs md:text-lg rounded-xl hover:shadow-[0_0_50px_rgba(200,255,0,0.6)] transition-all duration-300 hover:scale-105"
               >
                 Browse Components
                 <ArrowRight className="w-5 h-5" />

@@ -8,8 +8,6 @@ import { motion } from 'framer-motion'
 
 const navLinks = [
   { href: '/components', label: 'Components' },
-  { href: '/components/hero', label: 'Heroes' },
-  { href: '/components/sections', label: 'Sections' },
   { href: '/support', label: 'Support Us' },
 ]
 
@@ -56,17 +54,12 @@ export function Navbar() {
           </nav>
 
           {/* Right actions */}
-          <div className="hidden md:flex items-center gap-4">
-            <button className="p-2 text-gray-400 hover:text-white transition-colors">
-              <Search className="w-4 h-4" />
-            </button>
             <Link
               href="/components"
               className="px-5 py-2 bg-[#C8FF00] text-[#07080D] text-sm font-semibold rounded-lg hover:shadow-[0_0_20px_rgba(200,255,0,0.4)] transition-all duration-300 hover:scale-105"
             >
               Browse
             </Link>
-          </div>
 
           {/* Mobile toggle */}
           <button
